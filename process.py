@@ -1,9 +1,9 @@
 #class definition
-import threading
+from thread import Thread
 class Process: 
     #constuctor function
-    def __init__(self, instructions = threading.Thread, state = "", input = "", output = "", priority = "", memory = []):
-        self.instructions = instructions
+    def __init__(self, thread, state = "", input = "", output = "", priority = "", memory = []):
+        self.thread = thread
         self.state = state
         self.input = input
         self.output = output
@@ -11,6 +11,5 @@ class Process:
         self.memory = memory
         
     def __str__(self):
-        return f"Instructions: {self.instructions}\nState: {self.state}\nInput: {self.input}\nOutput: {self.output}\nPriority: {self.priority}\nMemory: {self.memory}"
+        return f"Thread: {self.thread}\nState: {self.state}\nInput: {self.input}\nOutput: {self.output}\nPriority: {self.priority}\nMemory: {self.memory}"
 
-    thread = threading.Thread(target=__init__)
