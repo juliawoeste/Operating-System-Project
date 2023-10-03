@@ -9,4 +9,4 @@ class Thread:
         
     def __str__(self):
         return f"State: {self.state}\nInstructions: {self.instructions}\nStack: {self.stack}"
-        
+
